@@ -1,0 +1,112 @@
+.bt-site-footer {
+  color: #FFFFFF;
+  background: $color-secondary;
+  padding: 30px 0;
+  .bt-copyright a {
+    color: $color-accent;
+  }
+}
+
+.elementor-element {
+  &.bt-site-footer-main {
+    > .e-con-inner {
+      > .elementor-element {
+        &:not(:last-child) {
+          &::after {
+            @media (min-width: $break-tl) {
+              content: "";
+              display: block;
+              background: #bfbfbf;
+              position: absolute;
+              right: 0;
+              top: 60px;
+              width: 1px;
+              height: 122px;
+            }
+          }
+        }
+        &:not(:first-child) {
+          @media (max-width: 1250px) and (min-width: $break-tl) {
+            padding-left: 15px;
+          }
+        }
+        @media (max-width: 1095px) and (min-width: $break-tl) {
+          &:first-child {
+            width: 30%;
+          }
+          &:nth-child(2) {
+            width: 45%;
+          }
+        }
+        .bt-elwg-site-infor {
+          &.bt-elwg-site-infor {
+            &--style-1 {
+              @media (max-width: 1250px) and (min-width: $break-tl) {
+                grid-gap: 15px;
+              }
+              @media (max-width: $break-xs) {
+                grid-gap: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.bt-site-footer-style1 {
+    > .e-con-inner {
+      > .elementor-element {
+        > .elementor-element {
+          @media (max-width: $break-lg) and (min-width: $break-tl) {
+            &:last-child {
+              width: 30%;
+              padding-left: 15px;
+            }
+            &:nth-child(2) {
+              width: 21%;
+            }
+          }
+        }
+        .tnp-subscription-minimal {
+          .tnp-privacy-field {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  &.bt-site-footer-style2 {
+    > .elementor-element {
+      @media (max-width: $break-lg) and (min-width: $break-tl) {
+        &:first-child {
+          width: 24%;
+        }
+        &:nth-child(2) {
+          width: 21%;
+        }
+        &:nth-child(3) {
+          .bt-time--hours {
+            max-width: 170px;
+          }
+        }
+        &:last-child {
+          padding-left: 15px;
+        }
+      }
+      .bt-elwg-time-list--default {
+        .bt-time--item {
+          &::not(:last-child) {
+            padding-bottom: 22px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(69, 77, 95, 1);
+          }
+        }
+      }
+      .tnp-subscription-minimal {
+        .tnp-privacy-field {
+          display: none;
+        }
+      }
+    }
+  }
+}
