@@ -162,6 +162,7 @@ class Widget_SiteInformation extends Widget_Base {
 				'default' => '',
 				'selectors' => [
 					'{{WRAPPER}} .bt-elwg-site-infor--item svg' => 'fill: {{VALUE}};',
+					'{{WRAPPER}} .bt-elwg-site-infor--item svg path' => 'fill: {{VALUE}};',
 				],
 			]
 		);
