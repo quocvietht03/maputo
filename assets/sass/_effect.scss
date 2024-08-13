@@ -415,11 +415,10 @@ body {
 		background-position: center center;
 	}
 }
-
 .bt-bg-scroll-enable {
 	.bt-bg-scroll-effect,
 	.bt-site-titlebar {
-		animation: effectBgScroll 130s infinite;
+		animation: effectBgScroll 120s infinite;
 	}
 }
 
@@ -632,6 +631,7 @@ body {
 				border-radius: 0;
 				transition: 0.4s ease-in-out;
 				z-index: -1;
+				border-radius: 8px;
 			}
 			&:hover {
 				&::after {

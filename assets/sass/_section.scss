@@ -28,9 +28,11 @@
     &.bt-text-view-more {
         a {
             color: $color-accent;
+            text-decoration: underline;
         }
     }
     &.bt-section-hero-home1 {
+        animation: effectBgScroll 30s infinite;
         .bt-section-content-hero {
             .elementor-widget-image {
                 img {
@@ -52,12 +54,12 @@
                     @media (max-width: 1575px) and (min-width: $break-tl) {
                         font-size: 50px;
                     }
-                    @media (max-width: 1325px) and (min-width: $break-tl) {
+                    @media (max-width: 1350px) and (min-width: $break-tl) {
                         max-width: 500px;
                     }
                 }
             }
-            @media (max-width: 1325px) and (min-width: $break-tl) {
+            @media (max-width: 1350px) and (min-width: $break-tl) {
                 .bt-col-image-left {
                     padding-right: 15px;
                 }
@@ -66,6 +68,14 @@
                 }
             }
             @media (max-width: $break-lg) and (min-width: $break-tl) {
+                .bt-elwg-highlighted-heading {
+                    h3 {
+                        font-size: 50px !important;
+                        .__text-highlighted {
+                            font-size: 50px !important;
+                        }
+                    }
+                }
                 .bt-col-content {
                     .elementor-button {
                         padding: 18px 35px;
@@ -77,6 +87,9 @@
         .bt-list-icon-custom.elementor-element {
             .elementor-widget-container {
                 overflow: initial;
+                @media (max-width: $break-lg) and (min-width: $break-tl) {
+                    margin-bottom: 30px;
+                }
             }
             .elementor-icon-list-items.elementor-inline-items {
                 @media (max-width: 1797px) and (min-width: $break-tl) {
@@ -97,14 +110,14 @@
                         @media (max-width: $break-tl) {
                             padding: 10px;
                         }
-                        @media (max-width: 420px) {
+                        @media (max-width: 430px) {
                             padding: 5px;
                             width: 35px;
                             height: 35px;
                         }
                     }
                     .elementor-icon-list-text {
-                        @media (max-width: 420px) {
+                        @media (max-width: 430px) {
                             font-size: 17px;
                         }
                     }
@@ -127,77 +140,136 @@
                 }
             }
         }
-        .bt-form-subscribe-home1 {
-            width: 100%;
-            .tnp-subscription-minimal {
-                margin: 0;
-                @extend .__bt-newsletter-form-style;
-                form {
-                    input.tnp-email {
-                        background: transparent;
-                        border-bottom: 2px solid #fff;
-                        max-width: calc(100% - 295px);
-                        padding: 10px 0;
-                        margin-bottom: 0;
-                        @media (max-width: $break-sm) {
-                            max-width: 100%;
-                        }
+    }
+    &.bt-form-subscribe-home1 {
+        width: 100%;
+        .tnp-subscription-minimal {
+            margin: 0;
+            @extend .__bt-newsletter-form-style;
+            form {
+                input.tnp-email {
+                    background: transparent;
+                    border-bottom: 2px solid #fff;
+                    max-width: calc(100% - 295px);
+                    padding: 10px 0;
+                    margin-bottom: 0;
+                    @media (max-width: $break-sm) {
+                        max-width: 100%;
                     }
-                    input.tnp-email,
-                    input.tnp-email::placeholder {
+                }
+                input.tnp-email,
+                input.tnp-email::placeholder {
+                    color: #fff;
+                    @media (max-width: $break-sm) {
+                        font-size: 16px;
+                    }
+                }
+                input.tnp-submit {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 0;
+                    background-color: transparent;
+                    border: 3px solid #fff;
+                    border-radius: 10px;
+                    @media (max-width: $break-sm) {
+                        position: relative;
+                        top: initial;
+                        transform: unset;
+                        margin-top: 50px;
+                        font-size: 16px;
+                        padding: 16px 30px 16px 60px;
+                    }
+                }
+                &::after {
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 203px;
+                    left: initial;
+                    @media (max-width: $break-sm) {
+                        width: 20px;
+                        height: 20px;
+                        top: inherit;
+                        transform: initial;
+                        right: inherit;
+                        left: 30px;
+                        bottom: 19px;
+                    }
+                }
+                .tnp-privacy-field {
+                    label {
                         color: #fff;
-                        @media (max-width: $break-sm) {
-                            font-size: 16px;
+                        .checkmark {
+                            border: none;
                         }
-                    }
-                    input.tnp-submit {
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        right: 0;
-                        background: transparent;
-                        border: 3px solid #fff;
-                        @media (max-width: $break-sm) {
-                            position: relative;
-                            top: initial;
-                            transform: unset;
-                            margin-top: 50px;
-                            font-size: 16px;
-                            padding: 16px 30px 16px 60px;
-                        }
-                    }
-                    &::after {
-                        top: 50%;
-                        transform: translateY(-50%);
-                        right: 203px;
-                        left: initial;
-                        @media (max-width: $break-sm) {
-                            width: 20px;
-                            height: 20px;
-                            top: inherit;
-                            transform: initial;
-                            right: inherit;
-                            left: 30px;
-                            bottom: 19px;
-                        }
-                    }
-                    .tnp-privacy-field {
-                        label {
+                        a {
                             color: #fff;
-                            .checkmark {
-                                border: none;
-                            }
-                            a {
+                            &:hover {
                                 color: #fff;
-                                &:hover {
-                                    color: #fff;
-                                }
                             }
                         }
-                        @media (max-width: $break-sm) {
-                            position: absolute;
-                            bottom: 60px;
-                            margin: 0;
+                    }
+                    @media (max-width: $break-sm) {
+                        position: absolute;
+                        bottom: 60px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    &.bt-popular-border-home1 {
+        .bt-service-popular {
+            .bt-post {
+                &:nth-child(5n + 1) {
+                    .bt-cover-image {
+                        border-bottom-left-radius: 50%;
+                    }
+                }
+                &:nth-child(5n + 2) {
+                    .bt-cover-image {
+                        border-top-left-radius: 50%;
+                    }
+                }
+                &:nth-child(5n + 3) {
+                    .bt-cover-image {
+                        border-top-right-radius: 50%;
+                    }
+                }
+                &:nth-child(5n + 4) {
+                    .bt-cover-image {
+                        border-top-left-radius: 50%;
+                    }
+                }
+                &:nth-child(5n + 5) {
+                    .bt-cover-image {
+                        border-bottom-right-radius: 50%;
+                    }
+                }
+                &:hover {
+                    &:nth-child(5n + 1) {
+                        .bt-post--content {
+                            border-bottom-left-radius: 50%;
+                        }
+                    }
+                    &:nth-child(5n + 2) {
+                        .bt-post--content {
+                            border-top-left-radius: 50%;
+                        }
+                    }
+                    &:nth-child(5n + 3) {
+                        .bt-post--content {
+                            border-top-right-radius: 50%;
+                        }
+                    }
+                    &:nth-child(5n + 4) {
+                        .bt-post--content {
+                            border-top-left-radius: 50%;
+                        }
+                    }
+                    &:nth-child(5n + 5) {
+                        .bt-post--content {
+                            border-bottom-right-radius: 50%;
                         }
                     }
                 }
@@ -232,7 +304,7 @@
             padding-right: 15px;
         }
         .elementor-heading-title {
-            @media (max-width: 1125px) and (min-width: $break-tl) {
+            @media (max-width: 1150px) and (min-width: $break-tl) {
                 font-size: 30px !important;
             }
         }

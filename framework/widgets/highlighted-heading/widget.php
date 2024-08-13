@@ -73,17 +73,6 @@ class Widget_HighlightedHeading extends Widget_Base
 		);
 
 		$this->add_control(
-			'highlighted_image',
-			[
-				'label'   => esc_html__('Highlighted Image', 'maputo'),
-				'type'    => Controls_Manager::MEDIA,
-				'default' => [
-					'url' => '',
-				],
-			]
-		);
-
-		$this->add_control(
 			'link_heading',
 			[
 				'label'       => esc_html__('Link', 'maputo'),
@@ -197,33 +186,16 @@ class Widget_HighlightedHeading extends Widget_Base
 				],
 			]
 		);
-
-		$this->add_responsive_control(
-			'highlighted_image_width',
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
 			[
-				'label' => __('Width Highlighted Image', 'maputo'),
-				'type'  => Controls_Manager::SLIDER,
-				'size_units' => ['px', '%'],
-				'range' => [
-					'px' => [
-						'min' => 0,
-						'max' => 100,
-						'step' => 1,
-					],
-					'%' => [
-						'min' => 0,
-						'max' => 100,
-					],
-				],
-				'default' => [
-					'unit' => '%',
-					'size' => 70,
-				],
-				'selectors' => [
-					'{{WRAPPER}} .bt-elwg-highlighted-heading .__text-highlighted img' => 'min-width: calc( 100% + {{SIZE}}{{UNIT}} )',
-				],
+				'name'     => 'highlighted_text_typography',
+				'label'    => __('Typography', 'maputo'),
+				'default'  => '',
+				'selector' => '{{WRAPPER}} .bt-elwg-highlighted-heading h1 .__text-highlighted, {{WRAPPER}} .bt-elwg-highlighted-heading h2 .__text-highlighted, {{WRAPPER}} .bt-elwg-highlighted-heading h3 .__text-highlighted, {{WRAPPER}} .bt-elwg-highlighted-heading h4 .__text-highlighted, {{WRAPPER}} .bt-elwg-highlighted-heading h5 .__text-highlighted, {{WRAPPER}} .bt-elwg-highlighted-heading h6 .__text-highlighted',
 			]
 		);
+
 
 		$this->add_control(
 			'show_animation',
@@ -253,7 +225,6 @@ class Widget_HighlightedHeading extends Widget_Base
 		$before_text = isset($settings['before_text']) ? $settings['before_text'] : '';
 		$after_text  = isset($settings['after_text']) ? $settings['after_text'] : '';
 		$hl_text     = isset($settings['highlighted_text']) ? $settings['highlighted_text'] : '';
-		$hl_image    = (isset($settings['highlighted_image']) && !empty($settings['highlighted_image'])) ? $settings['highlighted_image']['url'] : '';
 		$animation   = (isset($settings['show_animation']) && $settings['show_animation'] == 'yes') ? 'animationed' : '';
 ?>
 
@@ -267,9 +238,6 @@ class Widget_HighlightedHeading extends Widget_Base
 					<?php if (!empty($hl_text)) : ?>
 						<span class="__text-highlighted">
 							<?php echo esc_html($hl_text); ?>
-							<?php if ($hl_image) { ?>
-								<img src='<?php echo esc_url($hl_image) ?>' alt="img" />
-							<?php } ?>
 						</span>
 					<?php endif; ?>
 
@@ -281,9 +249,6 @@ class Widget_HighlightedHeading extends Widget_Base
 				<?php if (!empty($hl_text)) : ?>
 					<span class="__text-highlighted">
 						<?php echo esc_html($hl_text); ?>
-						<?php if ($hl_image) { ?>
-							<img src='<?php echo esc_url($hl_image) ?>' alt="img" />
-						<?php } ?>
 					</span>
 				<?php endif; ?>
 
