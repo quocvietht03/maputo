@@ -6,8 +6,8 @@ $price = get_field('price_service', $post_id);
 ?>
 <article <?php post_class('bt-post'); ?>>
   <div class="bt-post--inner">
+    <?php echo maputo_post_cover_featured_render($args['image-size']); ?>
     <div class="bt-post--infor">
-      <?php echo maputo_post_cover_featured_render($args['image-size']); ?>
       <div class="bt-post--content">
 
         <?php
@@ -24,7 +24,8 @@ $price = get_field('price_service', $post_id);
         ?>
 
       </div>
+      <?php echo maputo_service_button_book_now_render('Book Now'); ?>
     </div>
-    <?php echo maputo_service_button_book_now_render('Book Now'); ?>
+
   </div>
 </article>
