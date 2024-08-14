@@ -28,13 +28,15 @@
     &.elementor-grid-4 {
         .elementor-loop-container {
             &.elementor-grid {
-                grid-column-gap: 15px;
-                .bt-post {
-                    &--title {
-                        font-size: 24px;
-                    }
-                    &--description {
-                        font-size: 16px;
+                @media (max-width: $break-lg) and (min-width: $break-tl) {
+                    grid-column-gap: 15px;
+                    .bt-post {
+                        &--title {
+                            font-size: 24px;
+                        }
+                        &--description {
+                            font-size: 16px;
+                        }
                     }
                 }
             }

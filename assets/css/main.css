@@ -7390,12 +7390,13 @@ body {
   .__bt-pd-container-full-width > .elementor-element:last-child, .elementor-element.bt-section-testimonials-home1 > .elementor-element:last-child, .elementor-element.bt-section-about-home2 > .elementor-element:last-child {
     padding-right: calc((100% - var(--container-max-width)) / 2); } }
 
-.elementor-element.elementor-grid-4 .elementor-loop-container.elementor-grid {
-  grid-column-gap: 15px; }
-  .elementor-element.elementor-grid-4 .elementor-loop-container.elementor-grid .bt-post--title {
-    font-size: 24px; }
-  .elementor-element.elementor-grid-4 .elementor-loop-container.elementor-grid .bt-post--description {
-    font-size: 16px; }
+@media (max-width: 1199.98px) and (min-width: 1024.98px) {
+  .elementor-element.elementor-grid-4 .elementor-loop-container.elementor-grid {
+    grid-column-gap: 15px; }
+    .elementor-element.elementor-grid-4 .elementor-loop-container.elementor-grid .bt-post--title {
+      font-size: 24px; }
+    .elementor-element.elementor-grid-4 .elementor-loop-container.elementor-grid .bt-post--description {
+      font-size: 16px; } }
 .elementor-element.bt-text-view-more a {
   color: var(--e-global-color-accent, #E96CA7);
   text-decoration: underline; }
