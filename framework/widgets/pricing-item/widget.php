@@ -69,7 +69,7 @@ class Widget_PricingItem extends Widget_Base
 				'label' => __('Image Ratio', 'maputo'),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
-					'size' => 0.845,
+					'size' => 0.832,
 				],
 				'range' => [
 					'px' => [
@@ -81,6 +81,14 @@ class Widget_PricingItem extends Widget_Base
 				'selectors' => [
 					'{{WRAPPER}} .bt-pricing--featured .bt-cover-image' => 'padding-bottom: calc( {{SIZE}} * 100% );',
 				],
+			]
+		);
+		$this->add_control(
+			'pricing_svg',
+			[
+				'label' => esc_html__('Icon Pricing', 'maputo'),
+				'type' => Controls_Manager::MEDIA,
+				'media_types' => ['svg'],
 			]
 		);
 		$this->add_control(
@@ -108,7 +116,7 @@ class Widget_PricingItem extends Widget_Base
 				'label' => esc_html__('Price After', 'maputo'),
 				'type' => Controls_Manager::TEXT,
 				'label_block' => true,
-				'default' => esc_html__('/Month', 'maputo'),
+				'default' => esc_html__(' / Monthly', 'maputo'),
 			]
 		);
 		$this->add_control(
@@ -141,13 +149,16 @@ class Widget_PricingItem extends Widget_Base
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'list_content' => esc_html__('Eiusd tempor incididunt ut labore et dolore magna .', 'maputo')
+						'list_content' => esc_html__('90-Minute Swedish Massage', 'maputo')
 					],
 					[
-						'list_content' => esc_html__('Ut enim  minim veniam quis.', 'maputo')
+						'list_content' => esc_html__('60-Minute Classic Facial', 'maputo')
 					],
 					[
-						'list_content' => esc_html__('Proin efficitur, mauris vel condim entum pulvinar.', 'maputo')
+						'list_content' => esc_html__('45-Minute Full Body Scrub', 'maputo')
+					],
+					[
+						'list_content' => esc_html__('Aromatherapy Session', 'maputo')
 					],
 				],
 				'title_field' => '{{{ list_content }}}',
@@ -227,6 +238,7 @@ class Widget_PricingItem extends Widget_Base
 				'size_units' => ['px', '%'],
 				'selectors' => [
 					'{{WRAPPER}} .bt-pricing--featured .bt-cover-image' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} 0 0;',
+					'{{WRAPPER}} .bt-pricing--wrap-image' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} 0 0;',
 					'{{WRAPPER}} .bt-pricing--infor' => 'border-radius: 0 0 {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 					'{{WRAPPER}} .bt-pricing-item' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
@@ -262,9 +274,47 @@ class Widget_PricingItem extends Widget_Base
 			[
 				'label' => __('Background Content Image', 'maputo'),
 				'type' => Controls_Manager::COLOR,
-				'default' => 'rgba(233, 108, 167, 0.9)',
+				'default' => '',
 				'selectors' => [
 					'{{WRAPPER}} .bt-pricing--wrap-image' => 'background: {{VALUE}};',
+				],
+			]
+		);
+		$this->add_control(
+			'icon_image_pricing',
+			[
+				'label' => __('Icon', 'maputo'),
+				'type' => Controls_Manager::HEADING,
+			]
+		);
+		$this->add_responsive_control(
+			'icon_image_ratio',
+			[
+				'label' => __('Icon Width', 'maputo'),
+				'type' => Controls_Manager::SLIDER,
+				'default' => [
+					'size' => 70,
+				],
+				'range' => [
+					'px' => [
+						'min' => 1,
+						'max' => 100,
+						'step' => 1,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .bt-pricing--wrap-image svg ' => 'width: {{SIZE}}px;',
+				],
+			]
+		);
+		$this->add_control(
+			'icon_image_color',
+			[
+				'label' => __('Color', 'maputo'),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .bt-pricing--wrap-image svg path' => 'fill: {{VALUE}};',
 				],
 			]
 		);
@@ -411,9 +461,40 @@ class Widget_PricingItem extends Widget_Base
 			[
 				'label' => __('Background Content', 'maputo'),
 				'type' => Controls_Manager::COLOR,
-				'default' => '#f7f4ef',
+				'default' => '',
 				'selectors' => [
 					'{{WRAPPER}} .bt-pricing--infor' => 'background: {{VALUE}};',
+				],
+			]
+		);
+		$this->add_responsive_control(
+			'border_width_content_ratio',
+			[
+				'label' => __('Border Content Width', 'maputo'),
+				'type' => Controls_Manager::SLIDER,
+				'default' => [
+					'size' => 5,
+				],
+				'range' => [
+					'px' => [
+						'min' => 1,
+						'max' => 100,
+						'step' => 1,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .bt-pricing--infor' => 'border-width: {{SIZE}}px;',
+				],
+			]
+		);
+		$this->add_control(
+			'border_color_content',
+			[
+				'label' => __('Border Content Color', 'maputo'),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .bt-pricing--infor' => 'border-color: {{VALUE}};',
 				],
 			]
 		);
@@ -450,7 +531,7 @@ class Widget_PricingItem extends Widget_Base
 				'label' => __('Margin Bottom', 'maputo'),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
-					'size' => 40,
+					'size' => 32,
 				],
 				'range' => [
 					'px' => [
@@ -503,7 +584,37 @@ class Widget_PricingItem extends Widget_Base
 				],
 			]
 		);
-
+		$this->add_responsive_control(
+			'button_border_width_ratio',
+			[
+				'label' => __('Border Width', 'maputo'),
+				'type' => Controls_Manager::SLIDER,
+				'default' => [
+					'size' => 2,
+				],
+				'range' => [
+					'px' => [
+						'min' => 1,
+						'max' => 100,
+						'step' => 1,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .bt-pricing--button' => 'border-width: {{SIZE}}px;',
+				],
+			]
+		);
+		$this->add_control(
+			'button_border_color',
+			[
+				'label' => __('Border Color', 'maputo'),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .bt-pricing--button' => 'border-color: {{VALUE}};',
+				],
+			]
+		);
 		$this->end_controls_tab();
 
 		$this->start_controls_tab(
@@ -516,7 +627,7 @@ class Widget_PricingItem extends Widget_Base
 		$this->add_control(
 			'button_text_color_hover',
 			[
-				'label' => __('Text Color', 'maputo'),
+				'label' => __('Text Color Hover', 'maputo'),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -528,7 +639,7 @@ class Widget_PricingItem extends Widget_Base
 		$this->add_control(
 			'button_bg_color_hover',
 			[
-				'label' => __('Background Color', 'maputo'),
+				'label' => __('Background Color Hover', 'maputo'),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -536,7 +647,37 @@ class Widget_PricingItem extends Widget_Base
 				],
 			]
 		);
-
+		$this->add_responsive_control(
+			'button_border_width_ratio_hover',
+			[
+				'label' => __('Border Width Hover', 'maputo'),
+				'type' => Controls_Manager::SLIDER,
+				'default' => [
+					'size' => 2,
+				],
+				'range' => [
+					'px' => [
+						'min' => 1,
+						'max' => 100,
+						'step' => 1,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .bt-pricing--button:hover' => 'border-width: {{SIZE}}px;',
+				],
+			]
+		);
+		$this->add_control(
+			'button_border_color_hover',
+			[
+				'label' => __('Border Color Hover', 'maputo'),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .bt-pricing--button:hover' => 'border-color: {{VALUE}};',
+				],
+			]
+		);
 		$this->end_controls_tab();
 
 		$this->end_controls_tabs();
@@ -587,10 +728,11 @@ class Widget_PricingItem extends Widget_Base
 		$this->register_style_content_section_controls();
 		$this->register_style_box_section_controls();
 	}
-
 	protected function render()
 	{
 		$settings = $this->get_settings_for_display();
+		$svg_url = $settings['pricing_svg']['url'];
+
 
 ?>
 		<div class="bt-elwg-pricing-item--default">
@@ -610,6 +752,9 @@ class Widget_PricingItem extends Widget_Base
 					<?php } ?>
 					<div class="bt-pricing--wrap-image">
 						<?php
+						if (!empty($svg_url) && 'svg' === pathinfo($svg_url, PATHINFO_EXTENSION)) {
+							echo file_get_contents($svg_url);
+						}
 						if (!empty($settings['heading'])) {
 							echo '<h3 class="bt-pricing--heading">' . esc_html($settings['heading']) . '</h3>';
 						}

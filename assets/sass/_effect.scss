@@ -440,7 +440,31 @@ body {
 		}
 	}
 }
+@keyframes effectImageZoom {
+	from {
+		transform: sscale(1);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	to {
+		transform: scale(1);
+	}
+}
 
+.bt-img-zoom-enable {
+	.bt-image-zoom-effect {
+		> .elementor-widget-container {
+			overflow: hidden;
+		}
+		img {
+			@media (min-width: $break-lg) {
+				animation: effectImageZoom 50s infinite;
+				transition: all 3s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s;
+			}
+		}
+	}
+}
 .bt-img-zoom-enable {
 	.bt-image-effect {
 		.bt-post {

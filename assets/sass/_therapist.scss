@@ -7,15 +7,20 @@
     &--thumbnail {
       line-height: 0;
       .bt-cover-image {
-        padding-bottom: calc(1.18 * 100%);
+        padding-bottom: calc(1.185 * 100%);
         box-sizing: border-box;
+        border-radius: 20px 20px 0 0;
+        min-height: 394px;
+        @media (max-width: $break-lg) and (min-width: $break-tl) {
+          min-height: 290px;
+        }
       }
     }
     &--infor {
-      text-align: center;
-      padding: 31px 15px 30px;
+      padding: 31px 50px 31px;
       background: #f7f4ef;
       position: relative;
+      border-radius: 0px 0px 100px 20px;
     }
     &--title {
       color: #222;
@@ -37,9 +42,9 @@
       line-height: 1.4;
       position: absolute;
       top: -17px;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 50px;
       width: max-content;
+      border-radius: 5px;
     }
   }
 }

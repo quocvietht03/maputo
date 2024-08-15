@@ -828,8 +828,8 @@
       &--quote-icon {
         position: absolute;
         z-index: 3;
-        right: 27px;
-        top: 24px;
+        right: 20px;
+        top: 20px;
         @media (max-width: $break-xs) {
           right: 14px;
           top: 13px;
@@ -842,23 +842,34 @@
       &--inner {
         position: relative;
         overflow: hidden;
-        padding: 51px 71px;
+        padding: 50px 71px;
         z-index: 1;
         background-image: url("../images/bg-item-testimonials.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        border-radius: 20px 20px 80px 20px;
+        &::before {
+          background: $color-accent;
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          mix-blend-mode: multiply;
+        }
         @media (max-width: $break-xs) {
           padding: 35px;
         }
       }
       &--desc {
-        color: $color-text;
-        font-family: $secondary-font;
-        font-size: 26px;
+        color: #fff;
         font-style: italic;
         font-weight: 400;
         line-height: 36px;
+        font-size: 22px;
+        position: relative;
         > * {
           margin-left: auto;
           margin-right: auto;
@@ -1443,28 +1454,31 @@
       &--wrap-image {
         position: absolute;
         bottom: 0;
-        padding: 22px 44px 16px 38px;
+        padding: 53px 20px 41px;
+        text-align: center;
         width: 100%;
-        background: rgba(233, 108, 167, 0.9);
+        background: rgba(34, 34, 34, 0.8);
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        svg {
+          width: 70px;
+        }
       }
       &--heading {
         color: #fff;
         font-family: $secondary-font;
-        font-size: 30px;
+        font-size: 33px;
         font-style: normal;
-        font-weight: 500;
-        line-height: 33px;
+        font-weight: 700;
+        line-height: 40px;
         max-width: 200px;
-      }
-      &--price-time {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 15px;
-        padding-top: 15px;
-        border-top: 1px solid #d9d9d9;
+        margin: 13px auto;
       }
       &--price {
-        color: #fff;
+        color: $color-accent;
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
@@ -1473,33 +1487,43 @@
       &--price-after {
         font-size: 16px;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 500;
       }
       &--time {
-        color: #222;
+        color: #fff;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        background: #fff;
+        background: $color-accent;
         padding: 6px 14px 5px 13px;
+        position: absolute;
+        left: 50%;
+        width: max-content;
+        bottom: -16px;
+        transform: translateX(-50%);
       }
       &--infor {
-        padding: 31px 44px 40px 38px;
-        background: #f7f4ef;
+        padding: 45px 44px 40px 38px;
+        background: #fff;
+        border: 5px solid #f7f4ef;
+        border-top: none;
+        @media (max-width: $break-lg) and (min-width: $break-tl) {
+          padding: 40px 25px;
+        }
         @media (max-width: $break-xs) {
-          padding: 30px;
+          padding: 40px 20px 30px;
         }
       }
       &--info {
         padding: 0;
-        margin-bottom: 40px;
+        margin-bottom: 32px;
         li {
           display: flex;
-          grid-gap: 12px;
+          grid-gap: 8px;
           align-items: baseline;
           color: $color-text;
-          font-size: 18px;
+          font-size: 17px;
           font-style: normal;
           font-weight: 400;
           line-height: 24px;
@@ -1510,14 +1534,17 @@
             max-width: 18px;
           }
           &:not(:last-child) {
-            padding-bottom: 15px;
-            margin-bottom: 15px;
-            border-bottom: 1px solid #d9d9d9;
+            padding-bottom: 14px;
+            margin-bottom: 16px;
+            border-bottom: 1px dashed #aaaaaa;
           }
         }
       }
       &--box-button {
-        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
       }
       &--button {
         color: #fff;
@@ -1526,11 +1553,13 @@
         font-weight: 700;
         line-height: normal;
         text-transform: uppercase;
-        padding: 21px 48px;
+        padding: 16px 46px;
         background: $color-accent;
         display: inline-block;
+        border-radius: 10px;
+        border: 2px solid $color-accent;
         @media (max-width: $break-xs) {
-          padding: 18px 30px;
+          padding: 15px 30px;
         }
       }
       &--button-more {
@@ -1539,7 +1568,6 @@
         font-style: normal;
         font-weight: 400;
         line-height: 30px;
-        margin-top: 10px;
         a {
           color: $color-accent;
           text-decoration-line: underline;
