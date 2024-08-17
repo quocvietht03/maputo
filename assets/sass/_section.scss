@@ -535,8 +535,8 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                svg{
-                    path{
+                svg {
+                    path {
                         fill: currentColor;
                     }
                 }
@@ -555,7 +555,6 @@
         @media (max-width: 1470px) and (min-width: $break-tl) {
             > .elementor-element {
                 &:first-child {
-               
                 }
                 &:last-child {
                     padding-left: 30px;
@@ -566,12 +565,6 @@
     }
     &.elementor-widget-smartslider {
         .bt-col-slider-button-play {
-            left: -64px;
-            top: 27px;
-            @media (max-width: 350px) {
-                left: 0;
-                top: 0;
-            }
         }
     }
     &.bt-list-icon-home2 {
