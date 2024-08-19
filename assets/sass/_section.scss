@@ -593,7 +593,9 @@
                 padding: 16px;
                 border: 1px solid $color-accent;
                 border-radius: 50%;
-
+                path {
+                    fill: $color-accent;
+                }
                 @media (max-width: $break-lg) and (min-width: $break-tl) {
                     width: 60px;
                     height: 60px;
@@ -628,13 +630,21 @@
             &:first-child {
                 mix-blend-mode: multiply;
             }
-            &:last-child {
-                @media (max-width: $break-sm) and (min-width: $break-xs) {
-                    padding-top: 280px;
+            &:nth-child(2) {
+                @media (max-width: $break-sm) {
+                    background-color: #f7f4efe6;
+                }
+                .elementor-animation-grow-rotate {
+                    @media (max-width: $break-tl) {
+                        transform: none !important;
+                    }
                 }
             }
             @media (max-width: 1250px) and (min-width: $break-tl) {
                 &:first-child {
+                    width: 20%;
+                }
+                &:nth-child(2) {
                     width: 20%;
                     padding-left: 15px;
                     .elementor-widget-counter {

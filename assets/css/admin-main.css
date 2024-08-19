@@ -760,7 +760,7 @@ html :where(.editor-styles-wrapper) {
 
 .__make-appointment-style, .bt-block-make-appointment {
   padding: 61px 40px 52px;
-  background-color: var(--e-global-color-accent, #C2A74E);
+  background-color: var(--e-global-color-accent, #c2a74e);
   background-repeat: no-repeat;
   background-size: cover; }
   @media (max-width: 1199.98px) and (min-width: 991.98px) {
@@ -971,7 +971,8 @@ html :where(.editor-styles-wrapper) {
       color: #fff; }
 
 .__bt-form-appointment-style .gform_wrapper.gform-theme--api, .__bt-form-appointment-style .gform_wrapper.gform-theme--foundation {
-  --gf-form-gap-x: 30px; }
+  --gf-form-gap-x: 30px;
+  --gf-form-gap-y: 15px; }
 @media (max-width: 767.98px) {
   .__bt-form-appointment-style .gform_wrapper .gfield--width-half {
     grid-column: 1 / -1; } }
@@ -985,8 +986,9 @@ html :where(.editor-styles-wrapper) {
     color: var(--e-global-color-primary, #222);
     font-family: var(--e-global-typography-secondary-font-family, "Cormorant");
     font-size: 60px;
-    font-weight: 600;
-    margin-bottom: 7px; }
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: normal; }
     @media (max-width: 519.98px) {
       .__bt-form-appointment-style .gform_wrapper .gform_heading .gform_title {
         font-size: 48px; } }
@@ -1016,10 +1018,11 @@ html :where(.editor-styles-wrapper) {
 .__bt-form-appointment-style .gform_wrapper .gform-body .gfield_checkbox .gchoice .checkmark {
   border: 1px solid #b0b0b0; }
 .__bt-form-appointment-style .gform_wrapper .gform_footer {
-  margin-top: 31px; }
+  margin-top: 26px; }
   .__bt-form-appointment-style .gform_wrapper .gform_footer input[type="submit"] {
     padding: 20px 40px !important;
-    width: 100% !important; }
+    width: 100% !important;
+    border-radius: 10px !important; }
 
 /*
 * Import

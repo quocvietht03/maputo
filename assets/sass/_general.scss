@@ -811,7 +811,7 @@
 }
 .__make-appointment-style {
   padding: 61px 40px 52px;
-  background-color: var(--e-global-color-accent, #C2A74E);
+  background-color: var(--e-global-color-accent, #c2a74e);
   background-repeat: no-repeat;
   background-size: cover;
   @media (max-width: $break-lg) and (min-width: $break-md) {
@@ -1008,52 +1008,52 @@
 
 .__bt_gfield_checkbox {
   .gchoice {
-      display: flex;
-      align-items: center;
-      position: relative;
-      padding-left: 30px;
-      input {
-          margin: 0;
-          width: 20px;
-          height: 20px;
-          border: none;
-          padding-block: 0;
-          padding-inline: 0;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          left: 0;
-          z-index: 2;
-          opacity: 0;
-          &:checked ~ .checkmark {
-              background-image: url("../images/active-checkbox.svg");
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: cover;
-              background-size: 75%;
-          }
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 30px;
+    input {
+      margin: 0;
+      width: 20px;
+      height: 20px;
+      border: none;
+      padding-block: 0;
+      padding-inline: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      z-index: 2;
+      opacity: 0;
+      &:checked ~ .checkmark {
+        background-image: url("../images/active-checkbox.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-size: 75%;
       }
-      .checkmark {
-          width: 20px;
-          height: 20px;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          left: 0;
-          background: #fff5f4;
+    }
+    .checkmark {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      background: #fff5f4;
+    }
+    label {
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 36px;
+      color: #fff;
+      margin: 0;
+      a {
+        text-decoration: underline;
+        color: #fff;
       }
-      label {
-          font-size: 15px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 36px;
-          color: #fff;
-          margin: 0;
-          a {
-              text-decoration: underline;
-              color: #fff;
-          }
-      }
+    }
   }
 }
 .__bt-form-appointment-style {
@@ -1061,6 +1061,7 @@
     &.gform-theme--api,
     &.gform-theme--foundation {
       --gf-form-gap-x: 30px;
+      --gf-form-gap-y: 15px;
     }
     .gfield--width-half {
       @media (max-width: $break-sm) {
@@ -1077,8 +1078,9 @@
         color: $color-primary;
         font-family: $secondary-font;
         font-size: 60px;
-        font-weight: 600;
-        margin-bottom: 7px;
+        font-weight: 700;
+        margin-bottom: 6px;
+        line-height: normal;
         @media (max-width: $break-xs) {
           font-size: 48px;
         }
@@ -1123,10 +1125,11 @@
       }
     }
     .gform_footer {
-      margin-top: 31px;
+      margin-top: 26px;
       input[type="submit"] {
         padding: 20px 40px !important;
         width: 100% !important;
+        border-radius: 10px !important;
       }
     }
   }

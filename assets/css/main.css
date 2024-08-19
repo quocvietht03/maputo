@@ -1276,7 +1276,7 @@ img.alignright {
 
 .__make-appointment-style, .bt-block-make-appointment, .single-service .bt-main-content-ss .bt-sidebar-wrap .bt-sidebar-block.bt-make-appointment-block {
   padding: 61px 40px 52px;
-  background-color: var(--e-global-color-accent, #C2A74E);
+  background-color: var(--e-global-color-accent, #c2a74e);
   background-repeat: no-repeat;
   background-size: cover; }
   @media (max-width: 1199.98px) and (min-width: 991.98px) {
@@ -1491,7 +1491,8 @@ img.alignright {
       color: #fff; }
 
 .__bt-form-appointment-style .gform_wrapper.gform-theme--api, .elementor-element.bt-section-appointment-home2 .gform_wrapper.gform-theme--api, .elementor-element.bt-form-appointment-page .gform_wrapper.gform-theme--api, .__bt-form-appointment-style .gform_wrapper.gform-theme--foundation, .elementor-element.bt-section-appointment-home2 .gform_wrapper.gform-theme--foundation, .elementor-element.bt-form-appointment-page .gform_wrapper.gform-theme--foundation {
-  --gf-form-gap-x: 30px; }
+  --gf-form-gap-x: 30px;
+  --gf-form-gap-y: 15px; }
 @media (max-width: 767.98px) {
   .__bt-form-appointment-style .gform_wrapper .gfield--width-half, .elementor-element.bt-section-appointment-home2 .gform_wrapper .gfield--width-half, .elementor-element.bt-form-appointment-page .gform_wrapper .gfield--width-half {
     grid-column: 1 / -1; } }
@@ -1505,8 +1506,9 @@ img.alignright {
     color: var(--e-global-color-primary, #222);
     font-family: var(--e-global-typography-secondary-font-family, "Cormorant");
     font-size: 60px;
-    font-weight: 600;
-    margin-bottom: 7px; }
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: normal; }
     @media (max-width: 519.98px) {
       .__bt-form-appointment-style .gform_wrapper .gform_heading .gform_title, .elementor-element.bt-section-appointment-home2 .gform_wrapper .gform_heading .gform_title, .elementor-element.bt-form-appointment-page .gform_wrapper .gform_heading .gform_title {
         font-size: 48px; } }
@@ -1536,10 +1538,11 @@ img.alignright {
 .__bt-form-appointment-style .gform_wrapper .gform-body .gfield_checkbox .gchoice .checkmark, .elementor-element.bt-section-appointment-home2 .gform_wrapper .gform-body .gfield_checkbox .gchoice .checkmark, .elementor-element.bt-form-appointment-page .gform_wrapper .gform-body .gfield_checkbox .gchoice .checkmark {
   border: 1px solid #b0b0b0; }
 .__bt-form-appointment-style .gform_wrapper .gform_footer, .elementor-element.bt-section-appointment-home2 .gform_wrapper .gform_footer, .elementor-element.bt-form-appointment-page .gform_wrapper .gform_footer {
-  margin-top: 31px; }
+  margin-top: 26px; }
   .__bt-form-appointment-style .gform_wrapper .gform_footer input[type="submit"], .elementor-element.bt-section-appointment-home2 .gform_wrapper .gform_footer input[type="submit"], .elementor-element.bt-form-appointment-page .gform_wrapper .gform_footer input[type="submit"] {
     padding: 20px 40px !important;
-    width: 100% !important; }
+    width: 100% !important;
+    border-radius: 10px !important; }
 
 /*
 * Import
@@ -6850,15 +6853,15 @@ body {
 .bt-elwg-service-popular--style1 .bt-post {
   width: 24%; }
   .bt-elwg-service-popular--style1 .bt-post:hover .bt-post--content:before {
-    width: 100%;
-    height: 100%;
+    width: 101%;
+    height: 101%;
     border-radius: 0;
     transform: translate(-50%, -50%) rotate(45deg); }
     @media (max-width: 1024.98px) {
       .bt-elwg-service-popular--style1 .bt-post:hover .bt-post--content:before {
         transform: translate(-50%, -50%) rotate(90deg); } }
   .bt-elwg-service-popular--style1 .bt-post:nth-child(n + 5) {
-    margin-top: -4%; }
+    margin-top: -3.5%; }
   .bt-elwg-service-popular--style1 .bt-post:nth-child(n + 8) {
     width: 24.2%; }
   @media (max-width: 1024.98px) {
@@ -6921,8 +6924,8 @@ body {
   .bt-elwg-service-popular--style1 .bt-post--title {
     text-align: center;
     font-family: var(--e-global-typography-secondary-font-family, "Cormorant");
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 26px;
+    font-weight: 600;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7811,6 +7814,8 @@ body {
   padding: 16px;
   border: 1px solid var(--e-global-color-accent, #C2A74E);
   border-radius: 50%; }
+  .elementor-element.bt-list-icon-home2 .elementor-icon-list-item svg path {
+    fill: var(--e-global-color-accent, #C2A74E); }
   @media (max-width: 1199.98px) and (min-width: 1024.98px) {
     .elementor-element.bt-list-icon-home2 .elementor-icon-list-item svg {
       width: 60px;
@@ -7833,14 +7838,19 @@ body {
     align-items: center; } }
 .elementor-element.bt-section-about-home2 > .elementor-element:first-child {
   mix-blend-mode: multiply; }
-@media (max-width: 767.98px) and (min-width: 519.98px) {
-  .elementor-element.bt-section-about-home2 > .elementor-element:last-child {
-    padding-top: 280px; } }
+@media (max-width: 767.98px) {
+  .elementor-element.bt-section-about-home2 > .elementor-element:nth-child(2) {
+    background-color: #f7f4efe6; } }
+@media (max-width: 1024.98px) {
+  .elementor-element.bt-section-about-home2 > .elementor-element:nth-child(2) .elementor-animation-grow-rotate {
+    transform: none !important; } }
 @media (max-width: 1250px) and (min-width: 1024.98px) {
   .elementor-element.bt-section-about-home2 > .elementor-element:first-child {
+    width: 20%; }
+  .elementor-element.bt-section-about-home2 > .elementor-element:nth-child(2) {
     width: 20%;
     padding-left: 15px; }
-    .elementor-element.bt-section-about-home2 > .elementor-element:first-child .elementor-widget-counter > .elementor-widget-container {
+    .elementor-element.bt-section-about-home2 > .elementor-element:nth-child(2) .elementor-widget-counter > .elementor-widget-container {
       margin: -63px -300px 0px 0px; }
   .elementor-element.bt-section-about-home2 > .elementor-element:last-child {
     width: 80%;
