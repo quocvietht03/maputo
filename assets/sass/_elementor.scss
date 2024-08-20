@@ -1138,9 +1138,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 47px 15px;
+      padding: 47px 35px;
       background: #fff;
-      border-radius: 0;
+      border-radius: 20px 20px 80px 20px;
+      @media(max-width:$break-xs){
+        border-radius: 15px 15px 50px 15px;
+      }
       img {
         max-width: 142px;
         width: 100%;
