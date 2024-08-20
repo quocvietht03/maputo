@@ -922,6 +922,7 @@
       line-height: 36px;
       color: #555;
       font-family: $text-font;
+      border-radius: 10px;
       @media (max-width: $break-sm) {
         font-size: 16px;
       }
@@ -949,6 +950,7 @@
       background-repeat: no-repeat;
       background-size: 24px;
       z-index: 1;
+      border-radius: 10px;
       @media (max-width: $break-sm) {
         padding: 16px 30px 15px 60px;
         background-size: 20px;

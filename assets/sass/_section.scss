@@ -662,6 +662,13 @@
         }
     }
     &.bt-section-hours-home2 {
+        .bt-elwg-time-list--default{
+            .bt-time--item:not(:last-child){
+                padding-bottom: 22px;
+                margin-bottom: 15px;
+                border-bottom: 1px solid #C2C2C2;
+            }
+        }
         @media (max-width: 1470px) and (min-width: $break-tl) {
             padding-left: 40px;
             padding-right: 40px;
@@ -700,15 +707,29 @@
             }
         }
     }
+    &.bt-section-treatments-home2 {
+        @media (max-width: 1260px) and (min-width: $break-tl) {
+            > .e-con-inner {
+                gap: 15px;
+                > .elementor-element {
+                    &:first-child {
+                        .elementor-element {
+                            &.bt-col-list-icon-text {
+                                gap: 15px;
+                                margin-top: 30px;
+                                .elementor-widget-icon-box {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     &.bt-loop-testimonial-home2 {
         .elementor-swiper-button {
-            width: 60px;
-            height: 60px;
-            background: #fff;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+
             @media (max-width: $break-sm) {
                 &.elementor-swiper-button-prev {
                     left: 40% !important;

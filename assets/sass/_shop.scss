@@ -5,9 +5,10 @@
       position: relative;
       .wc-cover-image {
         @extend .bt-cover-image;
-        padding-bottom: 112%;
-        border-radius: 0;
+        padding-bottom: 118%;
+        border-radius: 20px 20px 0 0;
         background: #f9f9f9;
+
         @media (max-width: $break-xs) {
           padding-bottom: 100%;
         }
@@ -42,6 +43,7 @@
         text-overflow: ellipsis;
         overflow: hidden;
         margin-top: 30px;
+        border-radius: 10px;
         transition: all 0.3s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s;
         &.added {
           display: none;
@@ -69,13 +71,14 @@
     &__infor {
       padding: 34px 30px 29px 30px;
       width: 100%;
-      background: #f7f4ef;
+      background: #F7F4EF;
       z-index: 9;
       position: relative;
       box-sizing: border-box;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      border-radius: 0px 0px 80px 20px;
     }
 
     &__subtitle {
@@ -101,6 +104,7 @@
       transform: translateX(-50%);
       line-height: 1.35;
       width: max-content;
+      border-radius: 5px;
     }
     &__title {
       line-height: 100%;
@@ -108,9 +112,10 @@
       text-align: center;
       font-family: $secondary-font;
       font-size: 26px;
-      font-weight: 500;
+      font-weight: 600;
       text-transform: capitalize;
       margin: 0;
+      line-height: normal;
     }
     .woocommerce-loop-product__infor {
       .price {
@@ -122,6 +127,7 @@
         display: flex;
         justify-content: center;
         flex-direction: row-reverse;
+        line-height: normal;
         .woocommerce-Price-amount {
           text-decoration-line: underline;
           text-align: center;

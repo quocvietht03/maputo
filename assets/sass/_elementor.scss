@@ -177,6 +177,9 @@
       align-items: center;
       grid-gap: 11px;
     }
+    span {
+      width: calc(100% - 37px);
+    }
     svg {
       display: inline-block;
     }
