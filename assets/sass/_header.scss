@@ -306,6 +306,17 @@
     &.bt-header-main-nav {
       > .e-con-inner {
         > .elementor-element {
+          .elementor-widget-nav-menu {
+            > .elementor-widget-container {
+              .elementor-nav-menu {
+                .menu-item-has-children {
+                  .elementor-item {
+                    padding-right: 0 !important;
+                  }
+                }
+              }
+            }
+          }
           &.elementor-sticky {
             &--effects {
               box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
@@ -403,8 +414,8 @@
                           margin-right: 5px;
                           padding-top: 33px;
                           padding-bottom: 33px;
-                          padding-left: 7px;
-                          padding-right: 7px;
+                          padding-left: 5px;
+                          padding-right: 5px;
                         }
                       }
                     }
@@ -515,19 +526,16 @@
           &.elementor-sticky {
             &--effects {
               > .e-con-inner {
-                padding-top: 15px;
-                padding-bottom: 15px;
-                @media (max-width: $break-tl) {
-                  padding-top: 10px;
-                  padding-bottom: 10px;
-                }
                 > .elementor-element {
-                  &:first-child {
-                    margin-bottom: 0;
-                    img {
-                      max-width: 170px;
-                      @media (max-width: $break-tl) {
-                        max-width: 140px;
+                  &:last-child {
+                    .elementor-widget-nav-menu {
+                      > .elementor-widget-container {
+                        .elementor-nav-menu {
+                          .elementor-item {
+                            padding-top: 30px;
+                            padding-bottom: 30px;
+                          }
+                        }
                       }
                     }
                   }
@@ -543,7 +551,7 @@
           }
           @media (max-width: $break-lg) and (min-width: $break-tl) {
             padding-left: 15px;
-            padding-right: 15px;
+            padding-right: 30px;
           }
           > .e-con-inner {
             transition:
@@ -566,6 +574,13 @@
                           margin-left: 10px;
                           margin-right: 10px;
                         }
+                      }
+                    }
+                  }
+                  .elementor-element {
+                    &:nth-child(2) {
+                      > .elementor-widget-container {
+                        margin-left: 0;
                       }
                     }
                   }
