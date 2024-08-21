@@ -293,6 +293,7 @@
           column-gap: 10px !important;
           &--item {
             font-size: 14px !important;
+            width: calc(50% - 5px);
             a {
               grid-gap: 8px;
             }
@@ -473,6 +474,17 @@
           transition:
             padding 0.3s,
             font-size 0.3s;
+          .elementor-widget-nav-menu {
+            > .elementor-widget-container {
+              .elementor-nav-menu {
+                .menu-item-has-children {
+                  .elementor-item {
+                    padding-right: 0 !important;
+                  }
+                }
+              }
+            }
+          }
           @media (max-width: 1310px) and (min-width: $break-tl) {
             &:last-child {
               .elementor-widget-woocommerce-menu-cart {
@@ -523,6 +535,17 @@
     &.bt-header-nav-style-2 {
       > .e-con-inner {
         > .elementor-element {
+          .elementor-widget-nav-menu {
+            > .elementor-widget-container {
+              .elementor-nav-menu {
+                .menu-item-has-children {
+                  .elementor-item {
+                    padding-right: 0 !important;
+                  }
+                }
+              }
+            }
+          }
           &.elementor-sticky {
             &--effects {
               > .e-con-inner {
@@ -607,6 +630,31 @@
                     .elementor-button {
                       font-size: 16px;
                       padding: 16px 20px;
+                    }
+                  }
+                }
+              }
+              @media(max-width: 1100px) and (min-width: $break-tl) {
+                &:last-child{
+                  .elementor-widget-nav-menu {
+                    > .elementor-widget-container {
+                      .elementor-nav-menu {
+                        .elementor-item {
+                          font-size: 18px;
+                          margin-left: 5px;
+                          margin-right: 5px;
+                          padding-left: 5px;
+                          padding-right: 5px;
+                        }
+                      }
+                    }
+                  }
+                  .elementor-element {
+                    &:nth-child(2) {
+                      > .elementor-widget-container {
+                        margin-left: 10px;
+                        margin-right: 10px;
+                      }
                     }
                   }
                 }

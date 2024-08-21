@@ -779,6 +779,10 @@
                         padding-right: 15px;
                     }
                     &:last-child {
+                        padding-left: 8px;
+                        > .e-con-inner{
+                            padding-top: 0;
+                        }
                         .bt-col-list-icon-text {
                             margin-top: 25px;
                             grid-gap: 20px;
