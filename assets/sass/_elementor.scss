@@ -1016,7 +1016,27 @@
   &--style2 {
     .bt-post {
       background: $color-accent;
-      padding: 98px 40px 68px 40px;
+      padding: 61px 40px 62px 40px;
+      border-radius: 20px 20px 80px 20px;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 20px 20px 80px 20px;
+      }
+      &--rating {
+        display: flex;
+        .bt-filled {
+          display: flex;
+        }
+      }
       &--inner {
         text-align: center;
         display: flex;
@@ -1031,8 +1051,9 @@
         text-align: center;
         font-family: $secondary-font;
         font-size: 30px;
-        font-weight: 400;
+        font-weight: 600;
         line-height: 46px;
+        margin-top: 13px;
         @media (max-width: $break-xs) {
           font-size: 25px;
           line-height: 38px;
@@ -1052,7 +1073,7 @@
         position: relative;
         display: flex;
         align-items: center;
-        padding-top: 40px;
+        padding-top: 39px;
         transition: all 0.3s;
       }
       &--avatar {

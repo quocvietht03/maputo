@@ -1,4 +1,5 @@
 <?php
+
 namespace MaputoElementorWidgets\Widgets\TestimonialLoopItemStyle2;
 
 use Elementor\Widget_Base;
@@ -9,33 +10,37 @@ use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Box_Shadow;
 
-class Widget_TestimonialLoopItemStyle2 extends Widget_Base {
+class Widget_TestimonialLoopItemStyle2 extends Widget_Base
+{
 
-	public function get_name() {
+	public function get_name()
+	{
 		return 'bt-testimonial-loop-item-style2';
 	}
 
-	public function get_title() {
-		return __( 'Testimonial Loop Item Style 2', 'maputo' );
+	public function get_title()
+	{
+		return __('Testimonial Loop Item Style 2', 'maputo');
 	}
 
-	public function get_icon() {
+	public function get_icon()
+	{
 		return 'eicon-posts-ticker';
 	}
 
-	public function get_categories() {
-		return [ 'maputo' ];
+	public function get_categories()
+	{
+		return ['maputo'];
 	}
 
-	protected function register_layout_section_controls() {
+	protected function register_layout_section_controls() {}
 
-	}
-
-	protected function register_style_section_controls() {
+	protected function register_style_section_controls()
+	{
 		$this->start_controls_section(
 			'section_style_box',
 			[
-				'label' => esc_html__( 'Box', 'maputo' ),
+				'label' => esc_html__('Box', 'maputo'),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -43,7 +48,7 @@ class Widget_TestimonialLoopItemStyle2 extends Widget_Base {
 		$this->add_control(
 			'background_content',
 			[
-				'label' => __( 'Background', 'maputo' ),
+				'label' => __('Background', 'maputo'),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -52,13 +57,45 @@ class Widget_TestimonialLoopItemStyle2 extends Widget_Base {
 			]
 		);
 		$this->add_control(
+			'background_image',
+			[
+				'label' => __('Background Images', 'maputo'),
+				'type' => Controls_Manager::MEDIA,
+				'selectors' => [
+					'{{WRAPPER}} .bt-elwg-testimonial-loop-item--style2 .bt-post:before' => 'background-image: url("{{URL}}");',
+				],
+			]
+		);
+		$this->add_responsive_control(
+			'background_opacity',
+			[
+				'label' => __('Background Images Opacity', 'maputo'),
+				'type' => Controls_Manager::SLIDER,
+				'default' => [
+					'size' => 10,
+					'unit' => '%',
+				],
+				'range' => [
+					'%' => [
+						'min' => 0,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .bt-elwg-testimonial-loop-item--style2 .bt-post:before' => 'opacity: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_control(
 			'box_border_radius',
 			[
-				'label' => __( 'Border Radius', 'maputo' ),
+				'label' => __('Border Radius', 'maputo'),
 				'type' => Controls_Manager::DIMENSIONS,
-				'size_units' => [ 'px', '%' ],
+				'size_units' => ['px', '%'],
 				'selectors' => [
 					'{{WRAPPER}} .bt-post' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .bt-post:before' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -66,9 +103,9 @@ class Widget_TestimonialLoopItemStyle2 extends Widget_Base {
 		$this->add_responsive_control(
 			'box_padding',
 			[
-				'label' => __( 'Padding', 'maputo' ),
+				'label' => __('Padding', 'maputo'),
 				'type' => Controls_Manager::DIMENSIONS,
-				'size_units' => [ 'px' ],
+				'size_units' => ['px'],
 				'range' => [
 					'px' => [
 						'min' => 0,
@@ -94,15 +131,15 @@ class Widget_TestimonialLoopItemStyle2 extends Widget_Base {
 		$this->start_controls_section(
 			'section_style_content',
 			[
-				'label' => esc_html__( 'Content', 'maputo' ),
+				'label' => esc_html__('Content', 'maputo'),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
-	
+
 		$this->add_control(
 			'desc_style',
 			[
-				'label' => __( 'Description', 'maputo' ),
+				'label' => __('Description', 'maputo'),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -110,7 +147,7 @@ class Widget_TestimonialLoopItemStyle2 extends Widget_Base {
 		$this->add_control(
 			'desc_color',
 			[
-				'label' => __( 'Color', 'maputo' ),
+				'label' => __('Color', 'maputo'),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -123,7 +160,7 @@ class Widget_TestimonialLoopItemStyle2 extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'desc_typography',
-				'label' => __( 'Typography', 'maputo' ),
+				'label' => __('Typography', 'maputo'),
 				'default' => '',
 				'selector' => '{{WRAPPER}} .bt-post--desc',
 			]
@@ -131,7 +168,7 @@ class Widget_TestimonialLoopItemStyle2 extends Widget_Base {
 		$this->add_control(
 			'name_style',
 			[
-				'label' => __( 'Name Author', 'maputo' ),
+				'label' => __('Name Author', 'maputo'),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -139,7 +176,7 @@ class Widget_TestimonialLoopItemStyle2 extends Widget_Base {
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'maputo' ),
+				'label' => __('Color', 'maputo'),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -151,7 +188,7 @@ class Widget_TestimonialLoopItemStyle2 extends Widget_Base {
 		$this->add_control(
 			'name_color_hover',
 			[
-				'label' => __( 'Color Hover', 'maputo' ),
+				'label' => __('Color Hover', 'maputo'),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -164,7 +201,7 @@ class Widget_TestimonialLoopItemStyle2 extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'name_typography',
-				'label' => __( 'Typography', 'maputo' ),
+				'label' => __('Typography', 'maputo'),
 				'default' => '',
 				'selector' => '{{WRAPPER}} .bt-post--title-job',
 			]
@@ -172,25 +209,24 @@ class Widget_TestimonialLoopItemStyle2 extends Widget_Base {
 
 
 		$this->end_controls_section();
-
 	}
 
-	protected function register_controls() {
+	protected function register_controls()
+	{
 		$this->register_layout_section_controls();
 		$this->register_style_section_controls();
 	}
 
-	protected function render() {
+	protected function render()
+	{
 		$settings = $this->get_settings_for_display();
 
-		?>
-			<div class="bt-elwg-testimonial-loop-item--style2">
-				<?php get_template_part( 'framework/templates/testimonial', 'style2' ); ?>
-	    </div>
-		<?php
+?>
+		<div class="bt-elwg-testimonial-loop-item--style2">
+			<?php get_template_part('framework/templates/testimonial', 'style2'); ?>
+		</div>
+<?php
 	}
 
-	protected function content_template() {
-
-	}
+	protected function content_template() {}
 }

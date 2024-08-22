@@ -883,7 +883,7 @@
                 .bt-elwg-site-infor {
                     &--item {
                         width: 50%;
-                        padding: 20px 20px 22px 20px;
+                        padding: 20px 20px 21px 20px;
                         &.email {
                             border-left: 1px solid #dededd;
                             padding-left: 37px;
@@ -984,6 +984,76 @@
                             filter: invert(85%) sepia(50%) saturate(220%) hue-rotate(172deg) brightness(60%)
                                 contrast(100%);
                         }
+                    }
+                }
+            }
+        }
+    }
+    &.bt-gallery-instagram {
+        .elementor-gallery-item {
+            .elementor-gallery-item__overlay {
+                border-radius: 20px;
+                @media (max-width: $break-xs) {
+                    border-radius: 15px;
+                }
+            }
+            &:nth-child(5n + 1) {
+                border-bottom-left-radius: 80px;
+                .elementor-gallery-item__overlay {
+                    border-bottom-left-radius: 80px;
+                }
+                @media (max-width: $break-xs) {
+                    border-bottom-left-radius: 50px;
+                    .elementor-gallery-item__overlay {
+                        border-bottom-left-radius: 50px;
+                    }
+                }
+            }
+            &:nth-child(5n + 2) {
+                border-top-left-radius: 80px;
+                .elementor-gallery-item__overlay {
+                    border-top-left-radius: 80px;
+                }
+                @media (max-width: $break-xs) {
+                    border-top-left-radius: 50px;
+                    .elementor-gallery-item__overlay {
+                        border-top-left-radius: 50px;
+                    }
+                }
+            }
+            &:nth-child(5n + 3) {
+                border-top-right-radius: 80px;
+                .elementor-gallery-item__overlay {
+                    border-top-right-radius: 80px;
+                }
+                @media (max-width: $break-xs) {
+                    border-top-right-radius: 50px;
+                    .elementor-gallery-item__overlay {
+                        border-top-right-radius: 50px;
+                    }
+                }
+            }
+            &:nth-child(5n + 4) {
+                border-top-left-radius: 80px;
+                .elementor-gallery-item__overlay {
+                    border-top-left-radius: 80px;
+                }
+                @media (max-width: $break-xs) {
+                    border-top-left-radius: 50px;
+                    .elementor-gallery-item__overlay {
+                        border-top-left-radius: 50px;
+                    }
+                }
+            }
+            &:nth-child(5n + 5) {
+                border-bottom-right-radius: 80px;
+                .elementor-gallery-item__overlay {
+                    border-bottom-right-radius: 80px;
+                }
+                @media (max-width: $break-xs) {
+                    border-bottom-right-radius: 50px;
+                    .elementor-gallery-item__overlay {
+                        border-bottom-right-radius: 50px;
                     }
                 }
             }
