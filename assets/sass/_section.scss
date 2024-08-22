@@ -663,11 +663,11 @@
         }
     }
     &.bt-section-hours-home2 {
-        .bt-elwg-time-list--default{
-            .bt-time--item:not(:last-child){
+        .bt-elwg-time-list--default {
+            .bt-time--item:not(:last-child) {
                 padding-bottom: 22px;
                 margin-bottom: 15px;
-                border-bottom: 1px solid #C2C2C2;
+                border-bottom: 1px solid #c2c2c2;
             }
         }
         @media (max-width: 1470px) and (min-width: $break-tl) {
@@ -730,7 +730,6 @@
     }
     &.bt-loop-testimonial-home2 {
         .elementor-swiper-button {
-
             @media (max-width: $break-sm) {
                 &.elementor-swiper-button-prev {
                     left: 40% !important;
@@ -780,7 +779,7 @@
                     }
                     &:last-child {
                         padding-left: 8px;
-                        > .e-con-inner{
+                        > .e-con-inner {
                             padding-top: 0;
                         }
                         .bt-col-list-icon-text {
@@ -803,12 +802,12 @@
     }
     &.bt-section-wellness-journeys {
         > .e-con-inner {
-            @media (max-width: 1105px) and (min-width: $break-tl) {
+            @media (max-width: 1125px) and (min-width: $break-tl) {
                 flex-wrap: wrap !important;
             }
             > .elementor-element {
                 &:first-child {
-                    @media (max-width: 1105px) and (min-width: $break-tl) {
+                    @media (max-width: 1125px) and (min-width: $break-tl) {
                         width: 100%;
                     }
                 }
@@ -816,7 +815,7 @@
                     @media (max-width: 1260px) and (min-width: $break-tl) {
                         padding-left: 15px;
                     }
-                    @media (max-width: 1105px) and (min-width: $break-tl) {
+                    @media (max-width: 1125px) and (min-width: $break-tl) {
                         width: 100%;
                         padding-top: 30px;
                         padding-left: 0;

@@ -1738,18 +1738,20 @@
         padding: 0;
       }
       &--item {
+        display: flex;
+        column-gap: 15px;
+        align-items: center;
+        
         &:not(:last-child) {
           padding-bottom: 14px;
           margin-bottom: 10px;
           border-bottom: 1px dashed #aaaaaa;
         }
-        display: flex;
-        column-gap: 15px;
-        align-items: center;
       }
       &--icon {
         display: flex;
         align-items: center;
+
         img {
           width: 100%;
           max-width: 54px;
@@ -1967,14 +1969,14 @@
             margin: 0 0 22px 0;
           }
           &--item {
+            display: flex;
+            column-gap: 15px;
+            flex-direction: column;
             &:not(:last-child) {
               padding-bottom: 14px;
               margin-bottom: 10px;
               border-bottom: 1px solid #c2c2c2;
             }
-            display: flex;
-            column-gap: 15px;
-            flex-direction: column;
           }
           &--title {
             color: $color-text;
