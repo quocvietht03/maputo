@@ -1141,7 +1141,7 @@
       padding: 47px 35px;
       background: #fff;
       border-radius: 20px 20px 80px 20px;
-      @media(max-width:$break-xs){
+      @media (max-width: $break-xs) {
         border-radius: 15px 15px 50px 15px;
       }
       img {
@@ -1587,36 +1587,43 @@
     .bt-pricing {
       &-item {
         box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.1);
+        border-radius: 20px 20px 80px 20px;
       }
       &--featured {
         position: relative;
         z-index: 3;
+        .bt-cover-image {
+          border-radius: 20px 20px 0px 0px;
+          min-height: 195px;
+        }
       }
       &--wrap-image {
         position: absolute;
         bottom: 0;
         padding: 20px;
         width: 100%;
-        background: rgba(24, 29, 41, 0.6);
+        background: rgba(34, 34, 34, 0.7);
         height: 100%;
         left: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        border-radius: 20px 20px 0px 0px;
       }
       &--heading {
         color: #fff;
         font-family: $secondary-font;
-        font-weight: 500;
+        font-weight: 700;
         font-size: 36px;
-        margin-bottom: 4px;
+        line-height: normal;
       }
       &--price {
         color: $color-accent;
         text-align: center;
         font-size: 28px;
         font-weight: 700;
+        line-height: normal;
       }
       &--price-after {
         font-size: 16px;
@@ -1624,6 +1631,7 @@
         font-weight: 700;
         text-transform: uppercase;
         margin-left: 8px;
+        line-height: normal;
       }
       &--time {
         color: #fff;
@@ -1635,11 +1643,13 @@
         padding: 6px 14px 5px 13px;
         position: absolute;
         bottom: -16px;
+        border-radius: 5px;
       }
       &--infor {
         padding: 36px 44px 48px 44px;
         background: #fff;
         position: relative;
+        border-radius: 0 0 80px 20px;
         &::before {
           content: "";
           position: absolute;
@@ -1670,7 +1680,7 @@
       }
       &--info {
         padding: 0;
-        margin-bottom: 37px;
+        margin-bottom: 40px;
         display: flex;
         flex-direction: column;
         grid-gap: 18px;
@@ -1706,10 +1716,11 @@
         font-weight: 700;
         line-height: normal;
         text-transform: uppercase;
-        padding: 21px 30px;
+        padding: 18px 30px;
         background: $color-accent;
         display: block;
         width: 100%;
+        border-radius: 10px;
         @media (max-width: $break-xs) {
           padding: 18px 30px;
         }
@@ -1720,7 +1731,7 @@
         font-style: normal;
         font-weight: 400;
         line-height: 30px;
-        margin-top: 10px;
+        margin-top: 13px;
         a {
           color: $color-accent;
           text-decoration-line: underline;
@@ -1741,7 +1752,7 @@
         display: flex;
         column-gap: 15px;
         align-items: center;
-        
+
         &:not(:last-child) {
           padding-bottom: 14px;
           margin-bottom: 10px;
