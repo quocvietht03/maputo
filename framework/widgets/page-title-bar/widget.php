@@ -158,17 +158,12 @@ class Widget_PageTitleBar extends Widget_Base
 	protected function render()
 	{
 		$settings = $this->get_settings_for_display();
-		$home_text = 'Home';
+		$home_text = esc_html__('Home', 'maputo');
 		$delimiter = '|';
 ?>
 		<div class="bt-elwg-page-titlebar">
 
 			<div class="bt-page-titlebar">
-				<?php if (!empty($settings['custom_title_blurry'])) { ?>
-					<div class="bt-page-titlebar--title-blurry"><?php echo esc_html($settings['custom_title_blurry']); ?></div>
-				<?php } else { ?>
-					<div class="bt-page-titlebar--title-blurry"><?php echo maputo_page_title(); ?></div>
-				<?php } ?>
 				<div class="bt-page-titlebar--infor">
 					<h1 class="bt-page-titlebar--title"><?php echo maputo_page_title(); ?></h1>
 					<div class="bt-page-titlebar--breadcrumb">
@@ -182,7 +177,5 @@ class Widget_PageTitleBar extends Widget_Base
 <?php
 	}
 
-	protected function content_template()
-	{
-	}
+	protected function content_template() {}
 }
