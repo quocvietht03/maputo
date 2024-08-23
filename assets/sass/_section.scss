@@ -942,11 +942,13 @@
                                     background: #fff;
                                     padding-left: 30px;
                                     border: none;
+                                    border-radius: 10px;
                                     .select2-selection__arrow b {
                                         border-color: $color-accent transparent transparent transparent;
                                         border-width: 9px 8px 0 8px;
                                         margin-left: -13px;
                                         margin-top: 0;
+                                        top: 38%;
                                     }
                                 }
                                 input:not([type="checkbox"], [type="radio"]),
@@ -956,6 +958,7 @@
                                     padding: 10px 24px 10px 30px;
                                     border: none;
                                     height: 60px;
+                                    border-radius: 10px;
                                 }
                                 textarea {
                                     height: 114px;
@@ -964,7 +967,8 @@
                             .gform_footer {
                                 margin-top: 29px;
                                 input[type="submit"] {
-                                    padding: 20px 59px !important;
+                                    padding: 17px 59px !important;
+                                    border-radius: 10px !important;
                                 }
                             }
                         }
@@ -983,6 +987,7 @@
                         iframe {
                             filter: invert(85%) sepia(50%) saturate(220%) hue-rotate(172deg) brightness(60%)
                                 contrast(100%);
+                            border-radius: 20px 20px 80px 20px;
                         }
                     }
                 }
