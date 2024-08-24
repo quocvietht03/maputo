@@ -6,11 +6,14 @@
     margin: 0;
     background: #f7f4ef;
     padding: 40px;
+    border-radius: 15px 15px 60px 15px;
     @media (max-width: $break-lg) and (min-width: $break-md) {
       padding: 30px 15px;
+      border-radius: 10px 10px 50px 10px;
     }
     @media (max-width: $break-xs) {
       padding: 30px 15px;
+      border-radius: 10px 10px 50px 10px;
     }
   }
   .wp-block-heading,
@@ -177,12 +180,14 @@
       align-items: center;
       justify-content: center;
       padding: 16px;
+      border-radius: 10px;
     }
     &__input {
       width: 100%;
       padding: 18px 24px;
       border-radius: 0;
       font-family: $primary-font;
+      border-radius: 10px;
     }
     &__icon-button {
       .wp-block-search {
@@ -191,17 +196,15 @@
         }
       }
     }
-    &__no-button{
+    &__no-button {
       .wp-block-search {
         &__inside-wrapper {
           width: 100%;
           position: relative;
-        
         }
-     
       }
     }
-    &__button-only{
+    &__button-only {
       .wp-block-search {
         &__inside-wrapper {
           width: 100%;
@@ -248,6 +251,7 @@
           color: #fff;
           background: $color-accent;
           margin: 0;
+          border-radius: 0 10px 10px 0;
           svg {
             fill: currentColor;
           }

@@ -71,6 +71,7 @@
         font-weight: 500;
         line-height: normal;
         padding: 6px 16px;
+        border-radius: 5px;
       }
     }
     &--featured {
@@ -78,9 +79,11 @@
       overflow: hidden;
       line-height: 0;
       .bt-cover-image {
+        border-radius: 20px 20px 80px 20px;
         padding-bottom: calc(0.55 * 100%);
         @media (max-width: 600px) {
           padding-bottom: calc(0.75 * 100%);
+          border-radius: 15px 15px 60px 15px;
         }
       }
       a {
@@ -98,6 +101,7 @@
       position: relative;
       padding: 61px 40px 34px;
       margin-bottom: 30px;
+      border-radius: 0px 20px 20px 20px;
       @media (max-width: 640px) {
         padding: 45px 20px 25px;
         margin-left: 15px;
@@ -119,6 +123,7 @@
       display: flex;
       align-items: center;
       grid-gap: 9px;
+      border-radius: 10px 10px 10px 0px;
       svg {
         path {
           fill: #fff;
@@ -809,7 +814,7 @@
         @media (max-width: $break-lg) and (min-width: $break-tl) {
           min-height: 265px;
         }
-        @media(max-width:$break-xs){
+        @media (max-width: $break-xs) {
           min-height: 265px;
         }
       }

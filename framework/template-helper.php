@@ -174,24 +174,7 @@ if (!function_exists('maputo_page_title')) {
 		return ob_get_clean();
     }
 }
-/* Page title blurry */
-if (!function_exists('maputo_page_title_blurry')) {
-    function maputo_page_title_blurry() {
-		ob_start();
-		if(is_singular('post')){
-			esc_html_e('Blog Details', 'maputo');
-		}elseif(is_singular('therapist') || is_post_type_archive('therapist')){
-			esc_html_e('SPA Therapist', 'maputo');
-		}elseif(is_singular('service') || is_post_type_archive('service')){
-			esc_html_e('SPA Services', 'maputo');
-		}elseif(is_singular('product')){
-			esc_html_e('Product Details', 'maputo');
-		}else{
-			echo maputo_page_title();
-		}
-		return ob_get_clean();
-    }
-}
+
 /* Page breadcrumb */
 if (!function_exists('maputo_page_breadcrumb')) {
   function maputo_page_breadcrumb($home_text = 'Home', $delimiter = '-') {

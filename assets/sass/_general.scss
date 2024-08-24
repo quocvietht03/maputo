@@ -594,6 +594,7 @@
     line-height: 150%;
     color: $color-primary;
     background: transparent;
+    border-radius: 10px;
     &:not(.current, .dots):hover {
       color: $color-accent;
       svg {
@@ -791,6 +792,36 @@
       .bt-cover-image {
         padding-bottom: 100%;
       }
+      &:nth-child(5n + 1) {
+        .bt-cover-image {
+          border-radius: 10px 10px 10px 40px;
+        }
+      }
+      &:nth-child(5n + 2) {
+        .bt-cover-image {
+          border-radius: 40px 10px 10px 10px;
+        }
+      }
+      &:nth-child(5n + 3) {
+        .bt-cover-image {
+          border-radius: 10px 40px 10px 10px;
+        }
+      }
+      &:nth-child(5n + 4) {
+        .bt-cover-image {
+          border-radius: 10px 10px 40px 10px;
+        }
+      }
+      &:nth-child(5n + 5) {
+        .bt-cover-image {
+          border-radius: 10px 40px 10px 10px;
+        }
+      }
+      &:nth-child(5n + 6) {
+        .bt-cover-image {
+          border-radius: 10px 10px 40px 10px;
+        }
+      }
     }
     &--link {
       display: inline-flex;
@@ -811,16 +842,37 @@
 }
 .__make-appointment-style {
   padding: 61px 40px 52px;
-  background-color: var(--e-global-color-accent, #c2a74e);
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 15px 15px 60px 15px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-accent;
+    mix-blend-mode: multiply;
+    border-radius: 15px 15px 60px 15px;
+  }
   @media (max-width: $break-lg) and (min-width: $break-md) {
-    padding: 30px 15px;
+    padding: 40px 15px;
+    border-radius: 10px 10px 50px 10px;
+    &::before {
+      border-radius: 10px 10px 50px 10px;
+    }
   }
   @media (max-width: $break-xs) {
     padding: 40px 15px;
+    border-radius: 10px 10px 50px 10px;
+    &::before {
+      border-radius: 10px 10px 50px 10px;
+    }
   }
   .bt-make-appointment {
+    position: relative;
     &--sub-head {
       color: #fff;
       font-size: 18px;
@@ -858,6 +910,7 @@
       display: block;
       padding: 18px;
       text-align: center;
+      border-radius: 10px;
     }
   }
 }

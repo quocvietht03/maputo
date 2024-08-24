@@ -31,7 +31,6 @@ if (function_exists('get_field')) {
 
   <div class="bt-container">
     <div class="bt-page-titlebar">
-      <div class="bt-page-titlebar--title-blurry"><?php echo maputo_page_title_blurry(); ?></div>
       <div class="bt-page-titlebar--infor">
         <h1 class="bt-page-titlebar--title"><?php echo maputo_page_title(); ?></h1>
         <div class="bt-page-titlebar--breadcrumb">
