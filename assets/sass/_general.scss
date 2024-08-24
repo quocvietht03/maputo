@@ -368,6 +368,14 @@
     line-height: 120%;
     text-transform: capitalize;
   }
+  .wp-block-media-text__media {
+    img {
+      border-radius: 20px 20px 20px 80px;
+      @media (max-width: 600px) {
+        border-radius: 15px 15px 15px 60px;
+      }
+    }
+  }
   blockquote {
     position: relative;
     background: #f1f1f1;
@@ -381,6 +389,7 @@
     font-size: 24px;
     font-weight: 500;
     line-height: 30px;
+    border-radius: 20px 20px 80px 20px;
     > *:first-child {
       margin-top: 0 !important;
     }
@@ -412,6 +421,7 @@
       padding: 30px 30px 30px 70px;
       font-size: 20px;
       line-height: 1.4;
+      border-radius: 15px 15px 60px 15px;
       cite {
         font-size: 16px;
       }
@@ -859,16 +869,16 @@
   }
   @media (max-width: $break-lg) and (min-width: $break-md) {
     padding: 40px 15px;
-    border-radius: 10px 10px 50px 10px;
+    border-radius: 10px 10px 40px 10px;
     &::before {
-      border-radius: 10px 10px 50px 10px;
+      border-radius: 10px 10px 40px 10px;
     }
   }
   @media (max-width: $break-xs) {
     padding: 40px 15px;
-    border-radius: 10px 10px 50px 10px;
+    border-radius: 10px 10px 40px 10px;
     &::before {
-      border-radius: 10px 10px 50px 10px;
+      border-radius: 10px 10px 40px 10px;
     }
   }
   .bt-make-appointment {

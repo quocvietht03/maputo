@@ -93,11 +93,13 @@
     margin-top: 30px;
     padding: 30px 120px 30px 30px;
     background: #f7f4ef;
+    border-radius: 15px 15px 50px 15px;
     .bt-avatar {
       width: 70px;
       line-height: 0;
       img {
         width: 100%;
+        border-radius: 10px 10px 10px 25px;
       }
     }
   }
@@ -149,12 +151,14 @@
       color: #fff;
       background: $color-accent;
       padding: 11px 18px;
+      border-radius: 8px;
     }
   }
   .comment-respond {
     background: #f7f4ef;
     margin-top: 42px;
     padding: 54px 50px 50px;
+    border-radius: 20px 20px 80px 20px;
     .comment-reply-title {
       color: $color-primary;
       font-family: $secondary-font;
@@ -207,17 +211,19 @@
         width: 100%;
         max-width: calc(100% - 50px);
         min-height: unset;
-        border-radius: 0;
+        border-radius: 10px;
       }
       textarea {
         width: 100%;
         max-width: calc(100% - 50px);
         min-height: unset;
         border: none;
+        border-radius: 10px;
       }
       input[type="submit"] {
         font-family: $primary-font;
         text-transform: uppercase;
+        border-radius: 10px;
       }
     }
   }
@@ -254,8 +260,12 @@
     }
     .bt-comment {
       padding: 30px 15px 65px;
+      border-radius: 10px 10px 30px 10px;
       .bt-avatar {
         width: 42px;
+        img {
+          border-radius: 5px 5px 5px 10px;
+        }
       }
       .bt-content {
         width: 100%;
@@ -275,6 +285,7 @@
     }
     .comment-respond {
       padding: 30px 15px;
+      border-radius: 10px 10px 40px 10px;
       .comment-form {
         .bt-form-author,
         .bt-form-email {
