@@ -1120,6 +1120,36 @@
                     border-bottom-left-radius: 80px;
                 }
             }
+            @media(max-width:$break-xs){
+                border-radius: 15px;
+                .elementor-gallery-item__overlay {
+                    border-radius: 15px;
+                }
+                &:nth-child(4n + 1) {
+                    border-bottom-left-radius: 50px;
+                    .elementor-gallery-item__overlay {
+                        border-bottom-left-radius: 50px;
+                    }
+                }
+                &:nth-child(4n + 2) {
+                    border-top-left-radius: 50px;
+                    .elementor-gallery-item__overlay {
+                        border-top-left-radius: 50px;
+                    }
+                }
+                &:nth-child(4n + 3) {
+                    border-top-right-radius: 50px;
+                    .elementor-gallery-item__overlay {
+                        border-top-right-radius: 50px;
+                    }
+                }
+                &:nth-child(4n + 4) {
+                    border-bottom-left-radius: 50px;
+                    .elementor-gallery-item__overlay {
+                        border-bottom-left-radius: 50px;
+                    }
+                }
+            }
         }
     }
 }
