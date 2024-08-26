@@ -1090,4 +1090,36 @@
             }
         }
     }
+    &.bt-list-gallery-page {
+        .elementor-gallery-item {
+            border-radius: 20px;
+            .elementor-gallery-item__overlay {
+                border-radius: 20px;
+            }
+            &:nth-child(4n + 1) {
+                border-bottom-left-radius: 80px;
+                .elementor-gallery-item__overlay {
+                    border-bottom-left-radius: 80px;
+                }
+            }
+            &:nth-child(4n + 2) {
+                border-top-left-radius: 80px;
+                .elementor-gallery-item__overlay {
+                    border-top-left-radius: 80px;
+                }
+            }
+            &:nth-child(4n + 3) {
+                border-top-right-radius: 80px;
+                .elementor-gallery-item__overlay {
+                    border-top-right-radius: 80px;
+                }
+            }
+            &:nth-child(4n + 4) {
+                border-bottom-left-radius: 80px;
+                .elementor-gallery-item__overlay {
+                    border-bottom-left-radius: 80px;
+                }
+            }
+        }
+    }
 }
