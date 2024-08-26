@@ -348,12 +348,6 @@
                         }
                       }
                     }
-                    .bt-button-header-main {
-                      .elementor-button {
-                        padding-top: 35px;
-                        padding-bottom: 35px;
-                      }
-                    }
                   }
                 }
               }
@@ -376,10 +370,16 @@
                 }
               }
               .bt-button-header-main {
-                .elementor-button {
-                  display: block;
-                  overflow: hidden;
-                  transition: 0.4s all;
+                height: 100%;
+                .elementor-button-wrapper {
+                  height: 100%;
+                  .elementor-button {
+                    overflow: hidden;
+                    transition: 0.3s all;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                  }
                 }
               }
               @media (max-width: 1380px) and (min-width: $break-lg) {
