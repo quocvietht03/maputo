@@ -21,6 +21,9 @@
       background: #f7f4ef;
       position: relative;
       border-radius: 0px 0px 100px 20px;
+      @media(max-width:$break-xs){
+        border-radius: 0px 0px 65px 15px;
+      }
     }
     &--title {
       color: #222;
@@ -94,7 +97,11 @@
       &--thumbnail {
         width: 40%;
         .bt-cover-image {
+          border-radius: 20px 80px 0 0;
           padding-bottom: calc(1.28 * 100%);
+          @media (max-width: 1177px) and (min-width: 992px) {
+            border-radius: 15px 50px 0 0;
+          }
         }
         @media (max-width: 991px) {
           width: 100%;
@@ -107,12 +114,14 @@
         box-sizing: border-box;
         margin-top: 70px;
         position: relative;
+        border-radius: 0 80px 0 0;
         @media (max-width: 1177px) and (min-width: 992px) {
           padding: 30px;
         }
         @media (max-width: 991px) {
           width: 100%;
           margin: 0;
+          border-radius: 0;
         }
         @media (max-width: $break-xs) {
           padding: 30px 20px;
@@ -127,6 +136,7 @@
         padding: 10px 23px;
         line-height: 1.3;
         background-color: $color-accent;
+        border-radius: 10px;
       }
       &--title {
         color: $color-primary;
@@ -164,6 +174,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          border-radius: 10px 10px 10px 25px;
           svg {
             width: 100%;
             height: auto;
@@ -215,6 +226,7 @@
         gap: 15px;
         flex-wrap: wrap;
         justify-content: space-between;
+        border-radius: 0 0 20px 20px;
         @media (max-width: $break-sm) {
           padding: 20px;
         }
@@ -238,6 +250,7 @@
           background: $color-accent;
           display: block;
           padding: 15px 40px;
+          border-radius: 10px;
         }
       }
     }
@@ -255,11 +268,10 @@
       .bt-sub-text {
         color: $color-accent;
         text-align: center;
-        font-size: 18px;
-        font-weight: 500;
+        font-size: 24px;
+        font-weight: 700;
         line-height: normal;
-        letter-spacing: 0.9px;
-        text-transform: uppercase;
+        font-family: $accent-font;
       }
       .bt-main-text {
         color: $color-primary;
@@ -267,12 +279,13 @@
         font-family: $secondary-font;
         font-size: 55px;
         font-weight: 600;
-        margin: 12px 0 34px 0;
+        margin: 6px 0 34px 0;
         span {
           color: $color-accent;
+          font-family: $accent-font;
         }
         @media (max-width: $break-sm) {
-          font-size: 44px;
+          font-size: 45px;
         }
       }
     }
@@ -281,10 +294,19 @@
       display: flex;
       flex-wrap: wrap;
       gap: 30px;
+      @media(max-width:$break-lg) and (min-width:$break-tl){
+        gap: 20px;
+      }
       .bt-post {
         width: calc(25% - 22.5px);
+        @media(max-width:$break-lg) and (min-width:$break-tl){
+          width: calc(25% - 15px);
+        }
         &--infor {
           background: #fff;
+          @media(max-width:$break-lg) and (min-width:$break-tl){
+            padding: 30px 25px;
+          }
         }
         @media (max-width: $break-tl) {
           width: calc(50% - 15px);
@@ -303,10 +325,12 @@
       margin-top: 59px;
       a {
         color: $color-accent;
+        text-decoration: underline;
       }
       @media (max-width: $break-sm) {
         margin-top: 35px;
-        font-size: 18px;
+        font-size: 16px;
+        line-height: 1.7;
       }
     }
   }
