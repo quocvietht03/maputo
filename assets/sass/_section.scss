@@ -41,7 +41,7 @@
                             font-size: 16px;
                         }
                     }
-                    .bt-elwg-therapist-loop-item--default{
+                    .bt-elwg-therapist-loop-item--default {
                         .bt-post {
                             &--infor {
                                 padding: 30px 25px;
@@ -713,6 +713,14 @@
         }
     }
     &.bt-section-treatments-home2 {
+        .bt-icon-background {
+            @media (max-width: 1650px) {
+                top: -65px !important;
+            }
+            @media (max-width: 1200px) {
+                top: -55px !important;
+            }
+        }
         @media (max-width: 1260px) and (min-width: $break-tl) {
             > .e-con-inner {
                 gap: 15px;
@@ -1071,7 +1079,7 @@
     &.bt-icon-background {
         svg {
             @media (max-width: 1650px) {
-                height: 120px;
+                height: 120px !important;
             }
             @media (max-width: 1200px) {
                 height: 100px !important;
