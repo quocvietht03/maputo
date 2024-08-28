@@ -1064,6 +1064,14 @@
             }
         }
     }
+    &.bt-testimonial-section {
+        .bt-post--signature {
+            img {
+                filter: brightness(0);
+                -webkit-filter: brightness(0);
+            }
+        }
+    }
     &.bt-section-location-contact {
         > .e-con-inner {
             > .elementor-element {
@@ -1120,7 +1128,7 @@
                     border-bottom-left-radius: 80px;
                 }
             }
-            @media(max-width:$break-xs){
+            @media (max-width: $break-xs) {
                 border-radius: 15px;
                 .elementor-gallery-item__overlay {
                     border-radius: 15px;
