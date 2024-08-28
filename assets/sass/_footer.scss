@@ -161,4 +161,18 @@
       }
     }
   }
+  &.bt-copyright-footer-style2 {
+    > .e-con-inner {
+      > .elementor-element {
+        &:last-child {
+          @media (max-width: 1100px) and (min-width: $break-tl) {
+            column-gap: 40px;
+            .elementor-icon-list-item > a {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
 }

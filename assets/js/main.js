@@ -195,20 +195,15 @@
 	}
 	/* Border Top arch */
 	function MaputoBorderTop() {
+		var elements = document.querySelectorAll('.bt-border-top-arch');
 		if (window.innerWidth >= 768) {
-			var elements = document.querySelectorAll('.bt-border-top-arch');
-
 			elements.forEach(function (element) {
 				var width = element.offsetWidth;
 				var borderRadius = width / 2 + 'px';
-
 				element.style.borderTopLeftRadius = borderRadius;
 				element.style.borderTopRightRadius = borderRadius;
 			});
 		} else {
-			// Reset border radius for screens smaller than 768px
-			var elements = document.querySelectorAll('.bt-border-top-arch');
-
 			elements.forEach(function (element) {
 				element.style.borderTopLeftRadius = '';
 				element.style.borderTopRightRadius = '';
