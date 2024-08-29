@@ -65,9 +65,11 @@
     }
     .ginput_container_date {
       position: relative;
+      z-index: 1;
       svg {
         position: absolute;
         right: 13px;
+        z-index: -1;
         path {
           fill: $color-accent;
         }

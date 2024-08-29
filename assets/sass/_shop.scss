@@ -1281,6 +1281,9 @@
   .woocommerce form .form-row {
     padding: 0;
     margin-bottom: 20px;
+    @media(max-width:$break-sm){
+      width: 100%;
+    }
     &:last-child {
       margin-bottom: 0;
     }
