@@ -469,11 +469,6 @@
               }
             }
           }
-          @media (max-width: $break-tl) {
-            .elementor-icon svg {
-              fill: $color-accent !important;
-            }
-          }
         }
       }
       > .e-con-inner {
@@ -569,12 +564,6 @@
                       }
                     }
                   }
-                }
-              }
-
-              @media (max-width: $break-tl) {
-                .elementor-icon svg {
-                  fill: $color-accent !important;
                 }
               }
             }
