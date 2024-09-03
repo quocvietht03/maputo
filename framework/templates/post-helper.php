@@ -270,12 +270,6 @@ if (!function_exists('maputo_post_content_render')) {
         ?>
       </div>
     <?php
-    } else {
-    ?>
-      <div class="bt-post--excerpt">
-        <?php echo get_the_excerpt(); ?>
-      </div>
-    <?php
     }
 
     return ob_get_clean();
