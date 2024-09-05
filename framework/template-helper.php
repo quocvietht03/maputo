@@ -16,8 +16,11 @@ if ( ! function_exists( 'maputo_setup' ) ) {
 		/* Enable support for Post Thumbnails, and declare sizes. */
 		add_theme_support( 'post-thumbnails' );
 
-		/* Enable support for Title Tag */
-		 add_theme_support( "title-tag" );
+		add_theme_support( "title-tag" );
+		add_theme_support( "wp-block-styles" );
+		add_theme_support( "responsive-embeds" );
+		add_theme_support( "custom-header" );
+		add_theme_support( "align-wide" );
 
 		/* This theme uses wp_nav_menu() in locations. */
 		register_nav_menus( array(
@@ -53,29 +56,6 @@ if ( ! function_exists( 'maputo_setup' ) ) {
 	}
 }
 add_action( 'after_setup_theme', 'maputo_setup' );
-
-/* Custom Site Title */
-if ( ! function_exists( 'maputo_wp_title' ) ) {
-	function maputo_wp_title( $title, $sep ) {
-		global $paged, $page;
-		if ( is_feed() ) {
-			return $title;
-		}
-		// Add the site name.
-		$title .= get_bloginfo( 'name' );
-		// Add the site description for the home/front page.
-		$site_description = get_bloginfo( 'description', 'display' );
-		if ( $site_description && ( is_home() || is_front_page() ) ) {
-			$title = "$title $sep $site_description";
-		}
-		// Add a page number if necessary.
-		if ( $paged >= 2 || $page >= 2 ) {
-			$title = sprintf( esc_html__( 'Page %s', 'maputo' ), max( $paged, $page ) ) . " $sep $title";
-		}
-		return $title;
-	}
-	add_filter( 'wp_title', 'maputo_wp_title', 10, 2 );
-}
 
 /* Logo */
 if (!function_exists('maputo_logo')) {

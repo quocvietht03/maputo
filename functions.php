@@ -30,14 +30,16 @@ if (!function_exists('maputo_fonts_url')) {
 		global $maputo_options;
 		$base_font = 'Cormorant';
 		$head_font = 'DM Sans';
+		$spec_font = 'Dancing Script';
 
 		$font_url = '';
 		if ('off' !== _x('on', 'Google font: on or off', 'maputo')) {
-			$font_url = add_query_arg('family', urlencode($base_font . ':400,400i,600,700|' . $head_font . ':400,400i,500,600,700'), "//fonts.googleapis.com/css");
+			$font_url = add_query_arg('family', urlencode($base_font . ':400,400i,600,700|' . $head_font . ':400,400i,500,600,700' . $spec_font . ':400,500,600,700'), "//fonts.googleapis.com/css");
 		}
 		return $font_url;
 	}
 }
+
 /* Enqueue Script */
 if (!function_exists('maputo_enqueue_scripts')) {
 	function maputo_enqueue_scripts()

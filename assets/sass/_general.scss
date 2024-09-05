@@ -189,7 +189,11 @@
 .bt-cover-image {
   position: relative;
   overflow: hidden;
-  background: #cdcdcd;
+  background-color: #eaeaea;
+  background-image: url('../images/placeholder-image.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
   padding-bottom: 66.66%;
   img {
     @extend .bt-image-absolute;

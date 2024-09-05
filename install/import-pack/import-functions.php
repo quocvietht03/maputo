@@ -202,7 +202,7 @@ if( ! function_exists( 'maputo_import_pack_step_import_package_successful' ) ) {
                 <div class="desc"><?php echo "{$step['description']}" ?></div>
                 <div class="buttons-action">
                     <a href="javascript:" class="button button-close"><?php _e( 'Close', 'maputo' ); ?></a>
-                    <a href="<?php echo site_url(); ?>" class="button button-primary"><?php _e( 'Go Home', 'maputo' ); ?></a>
+                    <a href="<?php echo esc_url(home_url()); ?>" class="button button-primary"><?php _e( 'Go Home', 'maputo' ); ?></a>
                 </div>
             </div>
         </div>
